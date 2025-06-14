@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>About Us</title>
+  <link rel="stylesheet" href="AboutUs.style.css" />
+</head>
+<body>
+  <nav class="navbar">
+    <ul>
+      <li><a href="Home.html">Home</a></li>
+      <li><a href="AboutUs.html" class="active">AboutUs</a></li>
+      <li><a href="Products.html">Products</a></li>
+      <li><a href="ContactUs.html">ContactUs</a></li>
+    </ul>
+  </nav>
+
+  <section class="about-section">
+    <div class="about-text">
+      <h2><span class="line"></span>About <span class="highlight">Us</span></h2>
+      <p>
+        Coffee is a beloved brewed drink made<br>
+        from roasted coffee beans — the seeds <br> 
+        of berries from the Coffea plant. Native <br>
+        to tropical regions, the Coffea genus <br> 
+        has given rise to one of the world's most <br>
+         popular beverages, enjoyed for its rich <br>
+        flavor and energizing qualities.
+      </p>
+      <button onclick="showMore()">Know more</button>
+
+      <form id="moreInfoForm" style="display:none; margin-top: 20px;">
+        <label for="moreInfoText">Please provide more information:</label><br />
+        <textarea id="moreInfoText" name="moreInfoText" rows="4" cols="50" placeholder="Enter your text here..."></textarea><br />
+        <button type="submit">Submit</button>
+      </form>
+    </div>
+    <div class="about-image">
+      <img src="Images/Creamy.png" alt="Creamy" />
+    </div>
+  </section>
+
+  <!-- ✅ New Featured Section Start -->
+  <section class="featured-section">
+    <h3 class="featured-title">FEATURED</h3>
+    <h2 class="why-title">Why Choose <span class="highlight">Us?</span></h2>
+    <p class="why-description">
+      At the heart of every cup we serve is a <br> 
+      passion for quality and craft. We source <br>
+      only the finest beans from sustainable <br>
+      farms around the world, ensuring every <br> 
+      sip is rich, smooth, and unforgettable. <br> 
+      Whether you're starting your day or <br> 
+      taking a break, our coffee is made to <br> 
+      uplift, energize, and inspire.
+    </p>
+
+    <div class="product-grid">
+      <div class="product-card">
+        <img src="Images/Espresso Coffee.jpg" alt="Espresso">
+        <div class="product-info">
+          <strong>Espresso</strong><br>
+          <small>-Is a strong, concentrated coffee made by forcing hot water</small>
+        </div>
+      </div>
+      <div class="product-card">
+        <img src="Images/Nutella Pretzel Freakshake.jpg" alt="Nutella Shake">
+        <div class="product-info">
+          <strong>Nutella Shake</strong><br>
+          <small>-Is a creamy, chocolate-hazelnut flavored milkshake</small>
+        </div>
+      </div>
+      <div class="product-card">
+        <img src="Images/Cappuccino Coffee.jpg" alt="Cappuccino">
+        <div class="product-info">
+          <strong>Cappuccino</strong><br>
+          <small>-Is a popular Italian coffee drink</small>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- ✅ New Featured Section End -->
+
+  <script src="AboutUs.js"></script>
+</body>
+</html>

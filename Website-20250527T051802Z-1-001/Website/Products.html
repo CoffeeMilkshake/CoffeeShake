@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Products Page</title>
+  <link rel="stylesheet" href="Products.style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+  <nav class="navbar">
+    <ul>
+      <li><a href="Home.html">Home</a></li>
+      <li><a href="AboutUs.html">AboutUs</a></li>
+      <li><a href="Products.html" class="active">Products</a></li>
+      <li><a href="ContactUs.html">ContactUs</a></li>
+    </ul>
+  </nav>
+
+  <section class="about-section">
+    <div class="about-text">
+      <h2><span class="line"></span><span class="highlight">Pro</span>ducts</h2>
+    </div>
+  </section>
+
+  <section class="product-section">
+    <h3>TOP CATEGORIES</h3>
+    <p>Explore The Recent Most Bought Coffee Drinks This Week</p>
+  
+    <div class="product-grid coffee-grid">
+      <!-- Coffee products -->
+      <div class="card">
+        <span class="like" onclick="like(this)">
+          <img src="Images/Like.png" alt="Like">
+          <span>100</span>
+        </span>        
+        <img src="Images/Espresso Coffee.jpg" alt="Espresso Coffee">
+        <p>Espresso Coffee</p>
+        <button onclick="buy('Espresso Coffee')">Buy now</button>
+      </div>
+      <div class="card">
+        <span class="like" onclick="like(this)">
+          <img src="Images/Like.png" alt="Like">
+          <span>90</span>
+        </span>        
+        <img src="Images/Cappuccino Coffee.jpg" alt="Cappuccino Coffee">
+        <p>Cappuccino Coffee</p>
+        <button onclick="buy('Cappuccino Coffee')">Buy now</button>
+      </div>
+      <div class="card">
+        <span class="like" onclick="like(this)">
+          <img src="Images/Like.png" alt="Like">
+          <span>80</span>
+        </span>        
+        <img src="Images/Turkish Coffee.jpg" alt="Turkish Coffee">
+        <p>Turkish Coffee</p>
+        <button onclick="buy('Turkish Coffee')">Buy now</button>
+      </div>
+      <div class="card">
+        <span class="like" onclick="like(this)">
+          <img src="Images/Like.png" alt="Like">
+          <span>70</span>
+        </span>        
+        <img src="Images/Vietnamese Iced Coffee.jpg" alt="Vietnamese Iced Coffee">
+        <p>Vietnamese Iced Coffee</p>
+        <button onclick="buy('Vietnamese Iced Coffee')">Buy now</button>
+      </div>
+    </div>
+  
+    <h3>TOP Milk Shakes</h3>
+    <p>Explore The Recent Most Bought Shakes This Week</p>
+  
+    <div class="product-grid milkshake-grid">
+      <!-- Milkshake products -->
+      <div class="card">
+        <span class="like" onclick="like(this)">
+          <img src="Images/Like.png" alt="Like">
+          <span>100</span>
+        </span>        
+        <img src="Images/Sweet n_ Salty Shake.jpg" alt="Sweet n’ Salty Shake">
+        <p>Sweet n’ Salty Shake</p>
+        <button onclick="buy('Sweet n’ Salty Shake')">Buy now</button>
+      </div>
+      <div class="card">
+        <span class="like" onclick="like(this)">
+          <img src="Images/Like.png" alt="Like">
+          <span>90</span>
+        </span>        
+        <img src="Images/Nutella Pretzel Freakshake.jpg" alt="Nutella Pretzel Freakshake">
+        <p>Nutella Pretzel Freakshake</p>
+        <button onclick="buy('Nutella Pretzel Freakshake')">Buy now</button>
+      </div>
+      <div class="card">
+        <span class="like" onclick="like(this)">
+          <img src="Images/Like.png" alt="Like">
+          <span>80</span>
+        </span>        
+        <img src="Images/M&M’s shake.jpg" alt="M&M’s shake">
+        <p>M&M’s shake</p>
+        <button onclick="buy('M&M’s shake')">Buy now</button>
+      </div>
+      <div class="card">
+        <span class="like" onclick="like(this)">
+          <img src="Images/Like.png" alt="Like">
+          <span>70</span>
+        </span>        
+        <img src="Images/Birthday Cake shake.jpg" alt="Birthday Cake shake">
+        <p>Birthday Cake shake</p>
+        <button onclick="buy('Birthday Cake shake')">Buy now</button>
+      </div>
+    </div>
+  </section>  
+
+  <script>
+    function like(el) {
+      let countSpan = el.querySelector("span");
+      let count = parseInt(countSpan.innerText);
+      countSpan.innerText = count + 1;
+    }
+
+    function buy(product) {
+      alert("You clicked Buy now for " + product + "!");
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,161 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap');
+
+body {
+  font-family: 'Inter', sans-serif;
+  background: linear-gradient(to right, #c7904b, #4b2c20);
+  color: #fff;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar {
+  padding: 20px 80px;
+  text-align: right;
+}
+
+.navbar ul {
+  list-style: none;
+  display: flex;
+  justify-content: end;
+  gap: 60px;
+  margin-bottom: -100px;
+}
+
+.navbar a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 300;
+}
+
+.navbar a.active {
+  color: #f28c28;
+}
+
+.about-section {
+  padding: 20px 80px;
+}
+
+.about-text h2 {
+  font-size: 40px;
+  font-weight: 300;
+}
+
+.line {
+  display: inline-block;
+  width: 50px;
+  height: 2px;
+  background: #fff;
+  margin-right: 10px;
+  vertical-align: middle;
+}
+
+.highlight {
+  color: #f28c28;
+}
+
+.product-section {
+  text-align: center;
+  padding: 40px 80px;
+  margin-top: -180px;
+}
+
+.product-section h3 {
+    font-weight: 300;
+    font-size: 24px;
+    margin: 60px 0 10px;
+}
+  
+.product-section h3 + p {
+    margin-bottom: 30px;
+}
+  
+.product-section p {
+  font-weight: 300;
+  font-size: 14px;
+  margin-bottom: 30px;
+}
+
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px; /* ✅ Compact but clean */
+  justify-content: center;
+}
+
+.card {
+  position: relative;
+  background: #fff;
+  border-radius: 16px;
+  color: #000;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  transition: transform 0.3s;
+}
+
+.card:hover { 
+  transform: translateY(-5px);
+}
+
+.card img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  border-radius: 16px 16px 0 0; /* ✅ Round top corners of image */
+}
+
+.card p {
+  margin: 10px 0;
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.card button {
+  margin-top: auto;
+  padding: 8px 16px;
+  background: #000;
+  border: none;
+  color: #fff;
+  font-weight: 500;
+  cursor: pointer;
+  border-radius: 0 0 12px 12px;
+  width: 100%;
+  transition: background 0.3s;
+}
+
+.card button:hover {
+  background: #f28c28;
+  color: #fff;
+}
+
+/* Like button */
+.like {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background: rgba(255, 255, 255, 0.8);
+  padding: 4px 5px;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.like img {
+  width: 16px;
+  height: 16px;
+}
+
+
+@media (max-width: 768px) {
+  .navbar ul {
+    gap: 20px;
+  }
+
+  .about-section, .product-section {
+    padding: 20px;
+  }
+
+  .product-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
