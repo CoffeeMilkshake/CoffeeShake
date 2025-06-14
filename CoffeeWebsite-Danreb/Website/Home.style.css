@@ -1,0 +1,304 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap');
+
+body {
+  margin: 0;
+  font-family: "Inter", sans-serif;
+  background: linear-gradient(to right, #c7904b, #4b2c20);
+  color: white;
+  overflow-x: hidden;
+  overflow: hidden;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 80px;
+}
+
+.logo img {
+  width: 150px;
+  margin-left: -20px;
+}
+
+.nav-container {
+  display: flex;
+  align-items: center;
+  gap: 50px;
+  margin-top: -70px;
+}
+
+.nav-container a {
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 300;
+}
+
+.nav-container a:hover,
+.nav-container a.active {
+  color: #d68c2c;
+}
+
+.search-icon img {
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+}
+
+.main-content {
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: center;
+  justify-content: center;
+  padding: 60px 40px;
+}
+
+@media(min-width: 768px) {
+  .main-content {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 100px 80px;
+  }
+}
+
+.text-section {
+  max-width: 550px;
+}
+
+.text-section h1 {
+  font-size: 48px;
+  font-weight: 300;
+  margin-top: -200px;
+  margin-left: 50px;
+}
+
+.text-section h1 span {
+  color: #d68c2c;
+}
+
+.text-section blockquote {
+  margin: 20px 0;
+  font-size: 18px;
+  font-weight: 300;
+  color: #f5f5f5;
+  margin-left: 60px;
+}
+
+.text-section p {
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 1.6;
+  margin-left: 60px;
+}
+
+/* Shop Now Button */
+.shop-now-btn {
+  display: inline-block;
+  margin-left: 60px;
+  margin-top: 20px;
+  padding: 10px 25px;
+  font-size: 16px;
+  font-weight: 600;
+  color:  #ffffff;
+  background-color: #4e3f2c;
+  border: 2px solid #d68c2c;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.shop-now-btn:hover {
+  background-color: #d68c2c;
+  color: white;
+}
+
+/* Modal Styles */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; 
+  z-index: 1000; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; 
+  height: 100%; 
+  overflow: auto; 
+  background-color: rgba(0,0,0,0.6); /* Black w/ opacity */
+}
+
+.modal-content {
+  background-color: white;
+  margin: 10% auto; /* 10% from the top and centered */
+  padding: 30px 40px;
+  border-radius: 10px;
+  width: 90%;
+  max-width: 400px;
+  color: #333;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+  position: relative;
+}
+
+.close-btn {
+  color: #aaa;
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.close-btn:hover,
+.close-btn:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.modal-content h2 {
+  margin-top: 0;
+  margin-bottom: 20px;
+  font-weight: 600;
+  color: #d68c2c;
+  text-align: center;
+}
+
+.modal-content label {
+  display: block;
+  margin-bottom: 6px;
+  font-weight: 500;
+}
+
+.modal-content input[type="text"],
+.modal-content input[type="password"] {
+  width: 100%;
+  padding: 10px 12px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 14px;
+  box-sizing: border-box;
+}
+
+.continue-btn {
+  width: 100%;
+  padding: 12px 0;
+  background-color: #d68c2c;
+  border: none;
+  border-radius: 25px;
+  color: white;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.continue-btn:hover {
+  background-color: #b06f1a;
+}
+
+.sign-in-options {
+  margin-top: 25px;
+  text-align: center;
+  color: #555;
+}
+
+.sign-in-options p {
+  margin-bottom: 12px;
+  font-weight: 500;
+  color: #333;
+}
+
+.google-signin-btn,
+.facebook-signin-btn {
+  background-color: #f5f5f5;
+  border: 1px solid #ccc;
+  color: #333;
+  padding: 10px 20px;
+  margin: 5px 10px;
+  border-radius: 25px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background-color 0.3s ease;
+}
+
+.google-signin-btn:hover,
+.facebook-signin-btn:hover {
+  background-color: #d68c2c;
+  color: white;
+}
+
+.image-section img {
+  max-width: 98%;
+  margin-top: -70px;
+  margin-right: -50px;
+}
+
+.password-container {
+  position: relative;
+  width: 100%;
+}
+
+.password-container input[type="password"],
+.password-container input[type="text"] {
+  padding-right: 40px; /* space for the icon */
+  box-sizing: border-box;
+}
+
+#togglePassword {
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%);
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  font-size: 18px;
+  color: #666;
+  user-select: none;
+  padding: 0;
+  line-height: 1;
+}
+
+#togglePassword:focus {
+  outline: none;
+}
+
+.login-options {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.login-options label {
+  font-size: 14px;
+  color: #333;
+  user-select: none;
+  cursor: pointer;
+}
+
+.login-options label input[type="checkbox"] {
+  margin-right: 6px;
+  cursor: pointer;
+}
+
+.login-options a.forgot-password {
+  font-size: 14px;
+  color: #d68c2c;
+  text-decoration: none;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.login-options a.forgot-password:hover {
+  color: #b06f1a;
+}
+
+@media (min-width: 1024px) {
+  .image-section img {
+    width: 500px;
+    transform: translateY(-80px);
+  }
+}
